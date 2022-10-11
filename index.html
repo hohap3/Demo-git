@@ -72,14 +72,21 @@
        - fix:Khi ta sửa lỗi
 
       2. Làm việc trên nhánh con
-      3. sau khi phát triên , lên github tạo pull request để xin merge nhánh booking vào master
-      4. quay lại máy , checkout về master , git pull
+      3. sau khi phát triên , ở local , quay lại master (git pull) , tạo nhánh 1 trung gian
+        (vd: prod-signup), merge nhánh con vào nhánh trung gian , nếu có lỗi thì fix , 
+       git add ,git commit , git push nhánh trung gian lên github
+       nếu trong trường hợp merge nhánh con vào nhánh trung gian mà ko có lỗi thì
+       git push luôn nhánh trung gian lên github 
+
+      4. lên github tạo pull request để xin merge nhánh booking vào master
+      
+      5. quay lại máy , checkout về master , git pull
      
       - Có 2 cách để tạo pull request để merge 
        + C1: lên trang github để tạo pull request
        + C2: dùng git merge , nhưng phải đứng từ nhánh master để merge
 
-      5. Xóa nhánh con , kiểm tra danh sách nhánh , ta dùng git branch 
+      6. Xóa nhánh con , kiểm tra danh sách nhánh , ta dùng git branch 
       - Ta dùng git branch ten_nhanh -D để xóa nhánh con
     -->
 
